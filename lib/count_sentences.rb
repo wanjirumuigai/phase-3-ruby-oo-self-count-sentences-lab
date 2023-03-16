@@ -17,17 +17,17 @@ class String
     self.end_with?("!") ? true: false
   end
 
-  def count_sentences(word)
-   a = word.split(/\b[\.|\?|\!]/)
+  def count_sentences
+   a = self.split(/\b[\.|\?|\!]/)
    
    b = a.map do |w| 
-    w unless w.scan(/\w/).join("").length == 0
-    
+    w unless w.scan(/\w/).join("").length ==0
+         
+       
    end
-  p b
+  b.compact.size
   end
  
 end
-word = String.new
-word.count_sentences("This, well, is a sentence. This is too!! And so is this, I think? Woo...")
+
 
